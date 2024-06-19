@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <div className=" h-[50rem]">
-        <h1>Hello World!</h1>
+        <h1>This is an e commerce site!</h1>
       </div>
     </main>
   );
