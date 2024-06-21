@@ -4,6 +4,7 @@ import "./globals.css";
 import { useRouter } from "next/router";
 import Footer from "./components/footer";
 import Header from "./components/header";
+import SideBar from "./components/sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,8 +22,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        {children}
-        <Footer />
+        <div className="flex flex-row">
+          <div>
+            <SideBar />
+          </div>
+          <div className="p-10">{children}</div>
+        </div>
       </body>
     </html>
   );

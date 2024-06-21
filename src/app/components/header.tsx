@@ -1,22 +1,13 @@
 "use client";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function Header() {
   const router = useRouter();
 
-  const navLinks = [
-    { name: "Dashboard", href: "/about" },
-    { name: "Create", href: "/contact" },
-    { name: "Update", href: "/pricing" },
-    { name: "Delete", href: "/services" },
-    { name: "Done", href: "/forget-password" },
-  ];
-
   return (
-    <main>
-      <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+    <header>
+      <nav className="top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <div className="px-3 py-3 lg:px-5 lg:pl-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center justify-start rtl:justify-end">
@@ -128,27 +119,6 @@ export default function Header() {
           </div>
         </div>
       </nav>
-
-      <aside
-        id="logo-sidebar"
-        className="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
-        aria-label="Sidebar"
-      >
-        <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
-          <ul className="space-y-2 font-medium">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <Link
-                  href={link.href}
-                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </aside>
-    </main>
+    </header>
   );
 }
