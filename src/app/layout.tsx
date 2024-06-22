@@ -30,7 +30,7 @@ export default function RootLayout({
               <Header />
             </div>
             <div className="p-5 flex-grow">
-              <div className=" bg-slate-300 p-5">{children}</div>
+              <div className="p-5">{children}</div>
             </div>
           </div>
         </div>
