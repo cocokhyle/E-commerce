@@ -21,12 +21,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        <div className="flex flex-row">
-          <div>
+        <div className="grid grid-cols-[auto,1fr] h-screen">
+          <div className="">
             <SideBar />
           </div>
-          <div className="p-10">{children}</div>
+          <div className="flex flex-col">
+            <div>
+              <Header />
+            </div>
+            <div className="p-5 flex-grow">
+              <div className=" bg-slate-300 p-5">{children}</div>
+            </div>
+          </div>
         </div>
       </body>
     </html>

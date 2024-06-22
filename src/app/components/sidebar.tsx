@@ -11,7 +11,7 @@ export default function SideBar() {
     <div className="">
       <aside
         id="logo-sidebar"
-        className=" min-h-screen overflow-y-hidden w-64 top-0 left-0 pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        className="h-screen w-64 top-0 left-0 pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
         aria-label="Sidebar"
       >
         <div className=" px-3 pb-4 bg-white dark:bg-gray-800">
