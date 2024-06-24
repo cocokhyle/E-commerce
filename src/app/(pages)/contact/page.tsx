@@ -21,32 +21,41 @@ export default function Contact() {
   return (
     <main>
       <div>
-        <h1>Creating Todo</h1>
-        <div className="flex mt-4 w-[50rem]">
-          <form action={handleSubmit}>
+        <h1 className=" font-bold text-[30px]">Creating Todo</h1>
+        <div className="flex mt-4 ">
+          <form action={handleSubmit} className="flex justify-between mb-5">
             <input
               name="input"
-              className="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker"
+              className="shadow appearance-none border rounded w-[30rem] py-2 px-3 mr-4 text-grey-darker"
               placeholder="Add Todo"
             ></input>
-            <button className=" p-2 border-2 rounded " type="submit">
+            <button
+              className=" p-2 border-2 rounded-lg bg-blue-700 w-20 text-white"
+              type="submit"
+            >
               Add
             </button>
           </form>
         </div>
-        <ul>
-          {inputData.map((data, index) => (
-            <li key={index} className=" bg-slate-200 p-5 mt-3 flex">
-              {data}
-              <button
-                onClick={() => removeData(index)}
-                className="p-3 bg-blue-700 text-white rounded ml-5"
+
+        <div className="flex justify-between w-full">
+          <ul className="overflow-y-scroll h-[45rem] bg-slate-100 rounded-lg p-10">
+            {inputData.map((data, index) => (
+              <li
+                key={index}
+                className=" bg-slate-300 rounded-md p-5 mt-3 flex justify-between "
               >
-                Remove
-              </button>
-            </li>
-          ))}
-        </ul>
+                {data}
+                <button
+                  onClick={() => removeData(index)}
+                  className="p-3 bg-blue-700 text-white rounded ml-5 justify-end items-end"
+                >
+                  Done
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </main>
   );
